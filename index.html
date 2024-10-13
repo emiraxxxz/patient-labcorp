@@ -164,18 +164,21 @@
             height: 42px;
         }
 
+        /* Updated Back to Top Button */
         .back-to-top {
-            background-color: #ccc;
+            background-color: transparent;
             padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            color: black; /* Black arrow */
             display: inline-block;
             margin-top: 10px;
         }
 
         .back-to-top:hover {
-            background-color: #bbb;
+            color: #555; /* Slight color change on hover */
         }
 
         .legal {
@@ -337,7 +340,8 @@
                 </li>
             </ul>
 
-            <a class="back-to-top" href="javascript:void(0);" onclick="scrollToTop()">⬆ Back to Top</a>
+            <!-- Updated Back to Top button with black arrow and bold -->
+            <button class="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
 
             <div class="legal">
                 Labcorp | Patient™ © 2024 Laboratory Corporation of America® Holdings. All Rights Reserved. Visit labcorp.com | Privacy Statement | Do Not Sell or Share My Personal Information
