@@ -164,7 +164,7 @@
             height: 42px;
         }
 
-        /* Updated Back to Top Button */
+        /* Updated Back to Top Button with CSS Arrow */
         .back-to-top {
             background-color: #f2f2f2; /* Light grey background */
             padding: 10px 20px;
@@ -172,10 +172,24 @@
             font-weight: bold;
             border: none;
             cursor: pointer;
-            color: black; /* Black arrow */
+            color: black;
             display: inline-block;
             border-radius: 25px; /* Rounded button */
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .back-to-top::before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 8px solid black; /* Create the arrow */
+            position: absolute;
+            left: 15px; /* Adjust position */
+            top: 12px;
         }
 
         .back-to-top:hover {
@@ -341,8 +355,8 @@
                 </li>
             </ul>
 
-            <!-- Updated Back to Top button with black arrow and bold text in rounded button -->
-            <button class="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
+            <!-- Updated Back to Top button with CSS arrow instead of emoji -->
+            <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
 
             <div class="legal">
                 Labcorp | Patient™ © 2024 Laboratory Corporation of America® Holdings. All Rights Reserved. Visit labcorp.com | Privacy Statement | Do Not Sell or Share My Personal Information
